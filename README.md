@@ -12,8 +12,8 @@ The following assumptions are made in this implementation that can be improved i
 3. Fresh feed arrives at a constant flow rate. Simulator can include time dependent flow rates in the future.
 
 #### ReactionModels:
-1. The heat of reaction is assumed to be exothermic and dependent on number of cells present in the reactor. In reality, it should also be a function of food (glucose) concentration.
-2. The heat of reaction is assumed to be constant at all temperatures. Enthalpy as a function of temperature can be implemented using thermodynamic data.
+1. The heat of reaction is assumed to be constant at all temperatures. Enthalpy as a function of temperature can be implemented using thermodynamic data.
+2. The growth rate of cells is assumed to depend only on temperature. In reality, it would be a strong function of food (glucose) concentration also.
 3. Temperature dependence of growth rates is modeled via simplistic approximation (from http://www.pfigueiredo.org/MAI13.pdf). More accurate expressions depending on available microbes and their past performance through machine-learning would be an excellent addition.
 4. Cell death is not modelled, i.e. either growth happens from relation described in #3 or no growth happens. In reality, if temperature exceeds a threshold, cells should also die off.
 
