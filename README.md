@@ -4,11 +4,11 @@ This code Creates a time dependent simulator of reactor temperature dependent on
 The following assumptions are made in this implementation that can be improved in future,
 
 #### ReactorState:
-1. Fluid properties (density, heat capacity) do not change with cell count change. In reality, at higher cell counts, effective properties as a mean of fluid and cell properties would be better parameters.
+1. Fluid properties (density, heat capacity) do not change with cell count. In reality, at higher cell counts, effective properties as a mean of fluid and cell properties would be better parameters.
 
 #### ThermalModels:
-1. Agitator rpm is constant throughout the operation and generates negligible heat. Can be improved by modeling change in viscosity as f(ncells) and by experimental data on agitation.
-2. Block is an isothermal source/sink and supplies/removes heat instantaneously. Physical models such as coolant flow, swithcing between heating and cooling etc can be included.
+1. Agitator rpm is constant and generates negligible heat. Can be improved by modeling change in viscosity (as cell count changes), its impact on rpm (if any), using experimental data on the specific agitator being employed.
+2. Block is an isothermal source/sink and supplies/removes heat instantaneously. Physical models such as coolant flow, switching between heating and cooling etc can be included.
 3. Fresh feed arrives at a constant flow rate. Simulator can include time dependent flow rates in the future.
 
 #### ReactionModels:
